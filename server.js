@@ -12,7 +12,7 @@ const userRouter = require('./controllers/users')
 const hootsRouter = require('./controllers/hoots.js')
 
 mongoose.connect(process.env.MONGODB_URI)
-PORT = process.env.PORT
+const PORT = process.env.PORT
 
 mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}.`)
